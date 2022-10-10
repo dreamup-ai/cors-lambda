@@ -5,7 +5,7 @@ const {
 } = process.env;
 
 exports.handler = (event) => {
-  return {
+  const ret = {
     statusCode: 200,
     body: "OK",
     headers: {
@@ -14,4 +14,6 @@ exports.handler = (event) => {
       "Access-Control-Allow-Methods": ALLOW_METHODS,
     },
   };
+  console.log(ret);
+  return ret;
 };
