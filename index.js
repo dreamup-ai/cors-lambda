@@ -4,7 +4,7 @@ const {
   ALLOW_METHODS = "OPTIONS,GET",
 } = process.env;
 
-exports.handler = (event) => {
+exports.handler = async (event) => {
   const ret = {
     statusCode: 200,
     body: "OK",
@@ -14,6 +14,6 @@ exports.handler = (event) => {
       "Access-Control-Allow-Methods": ALLOW_METHODS,
     },
   };
-  console.log(ret);
+  // console.log(ret);
   return ret;
 };
